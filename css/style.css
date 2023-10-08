@@ -1,0 +1,139 @@
+/* ---------------------
+    GLOBAL STYLES
+------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* el tamanio del elemento incluye bordes y padding (con w100% no se va a salir del container) */
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    height: 100%;
+    background-color: var(--color_background);
+
+}
+
+/* variables */
+:root {
+
+    /* sizes */
+    --height_header: 80px;
+
+    /* colors */
+    --color_header: #219C90;
+    --color_background: #E9B824;
+
+    --padding_left_right: 1.5rem;
+}
+
+/* ---------------------
+        NAVBAR
+------------------------ */
+
+header {
+    height: var(--height_header);
+    /* llamo a la variable declarada en :root */
+    background-color: var(--color_header);
+    align-items: center;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+
+    position: relative; /* para que el absolute del ul sea en relacion a la navbar */
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav > ul {
+    list-style: none;
+    width: 100%; /* se va la lista debajo */
+    position: absolute;
+    top: var(--height_header); /* la lista queda exactamente debajo del header */
+    font-size: 2rem;
+
+    display: flex; /* para poder usar las propiedades de flex */
+    flex-direction: column; /* pero lo sigo dejando en columna */
+    
+    align-items: center;
+    justify-content: center;
+    /* padding: calc(2rem - var(--height_header)) 0 2rem 0; // centrarlo en pantalla teniendo en cuenta el header */
+
+    background-color: var(--color_header);
+    /* height: calc(100vh - var(--height_header)); // ocupa toda la pantalla */
+    height: 0; /* mientras esta oculto, la altura es 0 */
+
+    pointer-events: none; /* que no se puedan clickear */
+
+    overflow: hidden;
+}
+
+.ul_links-show {
+    height: calc(100vh - var(--height_header));
+    padding: calc(2rem - var(--height_header)) 0 2rem 0;
+    overflow: visible;
+    pointer-events: all;
+}
+
+nav > ul > li {
+    padding: 0.25rem;
+}
+
+.icons {
+    width: 2.5rem;
+}
+
+.hide-icon {
+    display: none;
+}
+
+.logo {
+    font-size: 1.5rem;
+    padding-left: var(--padding_left_right);
+}
+
+#container_icons {
+    padding-right: var(--padding_left_right);
+    cursor: pointer;
+}
+
+@media (min-width: 720px) {
+    #container_icons {
+        display: none;
+    }
+
+    nav > ul {
+        flex-direction: row;
+        height: var(--height_header);
+        top: 0;
+        position: relative;
+        pointer-events: all;
+        width: auto;
+        padding-right: var(--padding_left_right);
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* CONTENT */
+.content {
+    display: flex;
+    height: calc(100vh - var(--height_header));
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

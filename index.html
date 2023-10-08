@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Navbar responsive</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
+
+    <header>
+        <nav>
+            <a class="logo" href="#">
+                <h1>Logo</h1>
+            </a>
+
+            <div id="container_icons">
+
+                <!-- ICONS, (DEFAULT SIZE DELETED) (DEFAULT CLASS DELETED, ADDED .icons, IDs #list_icon/#close_icon) -->
+                <!-- bootstrap svg icon list -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icons" id="list_icon"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+
+                <!-- bootstrap svg icon close -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icons hide-icon" id="close_icon"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                </svg>
+
+            </div>
+
+            <ul id="ul_links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <div class="content">
+        <article>
+            <h2>Responsive navbar.</h2>
+            <p>Narrow the resolution to less than 720px.</p>
+        </article>
+    </div>
     
+       
+
+    <script src="./js/index.js"></script>
 </body>
+
 </html>
