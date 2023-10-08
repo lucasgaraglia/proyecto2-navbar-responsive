@@ -51,6 +51,9 @@ nav {
     flex-wrap: wrap;
 
     position: relative; /* para que el absolute del ul sea en relacion a la navbar */
+
+    max-width: 1000px; /* ancho maximo de la navbar */
+    margin: 0 auto;
 }
 
 nav a {
